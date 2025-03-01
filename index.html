@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Redirect</title>
-    <script type="text/javascript">
-        // Redirect immediately when the page loads
-       window.onload = function() {
-           // window.location.href = "https://link.xinghe.me/pzbpubec"; // Change this to the link you want
-          
-          window.location.href = "https://t.me/visalearning";
-       
-       };
+    <title>Redirect</title>
+    <script>
+        // List of random links
+        const randomLinks = [
+            "https://link.xinghe.me/4677bj2o", // Replace with your first link
+            "https://t.me/visalearning", // Replace with your second link
+            "https://link.xinghe.me/4677bj2o"  // Replace with your third link
+        ];
 
-         
+        // Function to select a random link and redirect
+        function randomRedirect() {
+            const randomIndex = Math.floor(Math.random() * randomLinks.length); // Randomly select an index
+            const selectedLink = randomLinks[randomIndex]; // Get the link based on the random index
+            window.location.href = selectedLink; // Redirect to the selected link
+        }
+
+        // Call the randomRedirect function on page load
+        window.onload = randomRedirect;
     </script>
 </head>
 <body>
-    <!-- No content in the body -->
+    <!-- Body is empty; it will redirect automatically on page load -->
 </body>
 </html>
