@@ -3,27 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect</title>
-    <script>
-        // List of random links
-        const randomLinks = [
-            "https://link.xinghe.me/4677bj2o", // Replace with your first link
-            "https://t.me/visalearning", // Replace with your second link
-            "https://link.xinghe.me/4677bj2o"  // Replace with your third link
-        ];
-
-        // Function to select a random link and redirect
-        function randomRedirect() {
-            const randomIndex = Math.floor(Math.random() * randomLinks.length); // Randomly select an index
-            const selectedLink = randomLinks[randomIndex]; // Get the link based on the random index
-            window.location.href = selectedLink; // Redirect to the selected link
+    <title>Auto Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            text-align: center;
+            padding: 50px;
+            color: white;
         }
-
-        // Call the randomRedirect function on page load
-        window.onload = randomRedirect;
-    </script>
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            max-width: 400px;
+            margin: auto;
+            color: black;
+        }
+        .countdown {
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Body is empty; it will redirect automatically on page load -->
+
+    <div class="container">
+        <h1>Welcome!</h1>
+        <p>Please wait while we redirect you...</p>
+
+        <!-- Countdown Timer -->
+        <p class="countdown" id="countdown">Redirecting in <span id="timer">3</span> seconds...</p>
+    </div>
+
+    <script>
+        const whatsappNumbers = [
+            "+919220452733",
+            "+917755828050",
+            "+6283895839380",
+            "+919010995598",
+            "+919933761587",
+            "+919956048875",
+            "+6283867865622",
+            "+918000792591",
+            "+919010995598"
+        ];
+
+        function getSavedNumber() {
+            return localStorage.getItem("selectedNumber");
+        }
+
+        function setNewNumber() {
+            let currentIndex = Math.floor(Math.random() * whatsappNumbers.length);
+            let newNumber = whatsappNumbers[currentIndex].replace(/[^0-9]/g, ""); // केवल नंबर रखें
+            localStorage.setItem("selectedNumber", newNumber);
+            return newNumber;
+        }
+
+        function getNextNumber() {
+            let savedNumber = getSavedNumber();
+            return savedNumber ? savedNumber : setNewNumber();
+        }
+
+        setTimeout(startCountdown, 3000); // पेज लोड होने के 3 सेकंड बाद काउंटडाउन स्टार्ट होगा
+
+        function startCountdown() {
+            document.getElementById("countdown").style.display = "block";
+
+            let timeLeft = 3;
+            let timer = document.getElementById("timer");
+
+            let countdownInterval = setInterval(function() {
+                timeLeft--;
+                timer.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "https://wa.me/" + getNextNumber();
+                }
+            }, 1000);
+        }
+    </script>
+
 </body>
 </html>
