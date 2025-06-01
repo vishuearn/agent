@@ -1,116 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Work From Home Opportunity</title>
   <style>
+    /* Reset some styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 15px;
+      color: #333;
+    }
+
+    .container {
+      background: white;
+      max-width: 700px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      padding: 40px 50px;
       text-align: center;
-      padding: 40px 20px;
     }
 
     h1 {
-      color: #2c3e50;
-      font-size: 32px;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      color: #4b0082;
+      margin-bottom: 30px;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #4b0082, #a020f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .section {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: left;
+      margin-bottom: 25px;
+      border-left: 6px solid #4b0082;
+      padding-left: 20px;
+      background: #f7f1ff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(107, 49, 255, 0.15);
     }
 
     .section h2 {
-      color: #34495e;
-      font-size: 22px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 8px;
-      margin-bottom: 10px;
+      color: #6a11cb;
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .section ul {
-      padding-left: 20px;
-      font-size: 17px;
-      color: #555;
+      list-style: inside disc;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #4b4b4b;
     }
 
     .whatsapp-button {
-      background-color: #25D366;
+      background: #25d366;
       color: white;
-      padding: 15px 35px;
-      font-size: 18px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding: 18px 45px;
       border: none;
-      border-radius: 8px;
+      border-radius: 50px;
       cursor: pointer;
-      margin-top: 30px;
-      transition: background-color 0.3s;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 35px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .whatsapp-button:hover {
-      background-color: #1DA851;
+      background: #1ebe5a;
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.8);
+    }
+
+    /* WhatsApp icon style */
+    .whatsapp-icon {
+      width: 26px;
+      height: 26px;
+      fill: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      .container {
+        padding: 30px 25px;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .section h2 {
+        font-size: 1.25rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>📢 Work From Home Opportunity</h1>
+  <div class="container">
+    <h1>Work From Home Opportunity</h1>
 
-  <div class="section">
-    <h2>Eligibility</h2>
-    <ul>
-      <li>Minimum age: 25 years</li>
-      <li>Basic knowledge of mobile usage</li>
-      <li>Internet connection required</li>
-      <li>Serious and dedicated individuals only</li>
-    </ul>
+    <div class="section">
+      <h2>Eligibility</h2>
+      <ul>
+        <li>Age 25 years or older</li>
+        <li>Basic knowledge of mobile usage</li>
+        <li>Reliable internet connection</li>
+        <li>Serious and dedicated individuals only</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Work Type</h2>
+      <ul>
+        <li>Online promotional work</li>
+        <li>No fees or investments required</li>
+        <li>Complete training provided</li>
+        <li>Work from mobile or laptop</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Benefits</h2>
+      <ul>
+        <li>Flexible working hours</li>
+        <li>Work from anywhere</li>
+        <li>Weekly payouts</li>
+        <li>Performance-based growth opportunities</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Timings</h2>
+      <ul>
+        <li>2–3 hours daily (part-time)</li>
+        <li>Work at your own convenience</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Earnings</h2>
+      <ul>
+        <li>₹5000 to ₹15000 per month (performance-based)</li>
+        <li>No pressure or targets</li>
+      </ul>
+    </div>
+
+    <button class="whatsapp-button" onclick="redirectToWhatsApp()">
+      <svg class="whatsapp-icon" viewBox="0 0 24 24" >
+        <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12a11.9 11.9 0 001.95 6.4L0 24l5.73-1.88a11.96 11.96 0 006.27 1.88c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 21.6a9.58 9.58 0 01-5.11-1.43l-.36-.22-3.4 1.11 1.13-3.3-.24-.37A9.57 9.57 0 012.4 12c0-5.3 4.3-9.6 9.6-9.6 2.56 0 4.96.99 6.77 2.8a9.6 9.6 0 012.83 6.8c0 5.3-4.3 9.6-9.6 9.6zm5.22-7.58c-.29-.15-1.73-.85-2-.95-.27-.1-.47-.15-.67.15-.2.3-.77.95-.95 1.15-.18.2-.36.22-.65.07a7.88 7.88 0 01-2.3-1.42 8.84 8.84 0 01-1.63-2.02c-.17-.3-.02-.46.13-.61.14-.15.3-.36.45-.55a.88.88 0 00.15-.3.24.24 0 00-.22-.3c-.2-.02-.43-.03-.66-.03s-.61.09-.93.43c-.32.34-1.2 1.18-1.2 2.87s1.23 3.33 1.4 3.56c.18.23 2.43 3.7 5.9 5.19a20.24 20.24 0 002.54 1.06c1.06.43 1.9.37 2.61.23.8-.17 2.46-1 2.81-1.97.35-.98.35-1.82.25-1.97-.1-.15-.27-.24-.56-.4z"/>
+      </svg>
+      Message on WhatsApp
+    </button>
   </div>
-
-  <div class="section">
-    <h2>Work Type</h2>
-    <ul>
-      <li>Online promotional work</li>
-      <li>No investment or fees</li>
-      <li>Full training will be provided</li>
-      <li>Work using mobile or laptop</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Benefits</h2>
-    <ul>
-      <li>Flexible working hours</li>
-      <li>Work from anywhere</li>
-      <li>Weekly payouts</li>
-      <li>Performance-based growth</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Timings</h2>
-    <ul>
-      <li>2–3 hours daily (part-time)</li>
-      <li>Work at your convenience</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Earnings</h2>
-    <ul>
-      <li>₹5000 to ₹15000 per month (based on performance)</li>
-      <li>No targets or pressure</li>
-    </ul>
-  </div>
-
-  <button class="whatsapp-button" onclick="redirectToWhatsApp()">
-    Message on WhatsApp
-  </button>
 
   <script>
     const numbers = [
@@ -136,9 +197,8 @@
       const telegramRedirect = "https://t.me/visalearning";
       window.open(whatsappURL, "_blank");
       // window.location.href = telegramRedirect;
-
     }
   </script>
-
+  
 </body>
 </html>
